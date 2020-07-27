@@ -22,7 +22,6 @@ export default class PicZoomerLens{
     }
 
     createLens() {
-        this.viewer.log();
         let el = document.createElement('span');
         el.classList.add(this.CLASSES.lens);
         this.container.append(el);

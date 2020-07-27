@@ -1,7 +1,8 @@
 export default class PicZoomerViewer{
     get CLASSES() {
         return {
-            viewer: 'pic-zoom-viewer'
+            viewer: 'pic-zoom-viewer',
+            showViewer: 'show-viewer'
         }
     }
 
@@ -32,16 +33,6 @@ export default class PicZoomerViewer{
         }
     }
 
-    log() {
-        console.log('CI SONO');
-    }
-
-    // isLoaded() {
-    //     if (this.image.src) {
-    //         return true
-    //     }
-    // }
-
     onLoad(cb) {
         this.image.addEventListener('load', (e) => {
             cb();
@@ -49,10 +40,17 @@ export default class PicZoomerViewer{
     }
 
     position(fromLeft,fromTop) {
-        console.log(fromLeft);
-        console.log(fromTop);
+        // console.log(fromLeft);
+        // console.log(fromTop);
         this.image.style.left = `-${fromLeft}px`;
         this.image.style.top = `-${fromTop}px`;
+    }
+
+    show() {
+        this.element.classList.add(this.CLASSES.showViewer);
+    }
+    hide() {
+        this.element.classList.remove(this.CLASSES.showViewer)
     }
 
 }

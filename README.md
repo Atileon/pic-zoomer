@@ -1,8 +1,31 @@
+# PIC ZOOMER 
+
+## Structure
+
+```html
+<div class="img-wrapper"
+        data-pic-zoomer
+        data-zoom-amount="9"
+        data-zoom-img-src="https://picsum.photos/400/400"
+      >
+        <div class="img__wrapper">
+          <img src="https://picsum.photos/400/400" alt="" data-zoom-target-img />
+          <!-- <div class="pic-zoom__lens" data-zoom-lens></div> -->
+        </div>
+
+        <div class="img-zoomed" data-zoom-viewer>
+        </div>
+      </div>
+```
+
+
 # Snowpack preset-env
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 
 ## Available Scripts
+
+
 
 ### npm start
 

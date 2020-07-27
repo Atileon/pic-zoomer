@@ -23,10 +23,17 @@ body{
 }
 .pic-zoom-viewer{
     position: relative;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s ease-in-out;
     img{
-        position: abolute;
+        position: absolute;
         top: 0;
         left: 0;
+    }
+    &.show-viewer{
+        opacity: 1;
+        visibility: visible;
     }
 }
 
@@ -40,11 +47,6 @@ body{
     height: 300px;
     position: relative;
     overflow: hidden;
-    img{
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
 }
 
 .pic-zoom-lens{

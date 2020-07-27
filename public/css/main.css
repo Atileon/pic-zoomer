@@ -22,11 +22,18 @@ body {
 
 .pic-zoom-viewer {
   position: relative;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease-in-out;
 }
 .pic-zoom-viewer img {
-  position: abolute;
+  position: absolute;
   top: 0;
   left: 0;
+}
+.pic-zoom-viewer.show-viewer {
+  opacity: 1;
+  visibility: visible;
 }
 
 .img-wrapper {
@@ -40,9 +47,4 @@ body {
   height: 300px;
   position: relative;
   overflow: hidden;
-}
-.img-zoomed img {
-  position: absolute;
-  top: 0;
-  left: 0;
 }

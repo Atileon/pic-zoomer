@@ -31,11 +31,13 @@ export default class PicZoomer {
     console.log("PICZOOMER!");
     this.image.addEventListener('mouseover', (e) => {
       this.zoomLens.init();
+      this.viewer.show();
     });
     this.image.addEventListener('mousemove', this.moveHandler);
 
     this.image.addEventListener('mouseout', () => {
       this.zoomLens.destroy();
+      this.viewer.hide();
     })
   }
 
@@ -57,7 +59,7 @@ export default class PicZoomer {
     }
   }
   currentPos(e) {
-    console.log(e);
+    // console.log(e);
     let rect = this.image.getBoundingClientRect();
     let x = e.pageX - rect.left;
     let y = e.pageY - rect.top;
@@ -71,27 +73,6 @@ export default class PicZoomer {
     };
   }
 
-  printData() {
-    console.log(this.zoomLens);
-    this.image.addEventListener("click", e => {
-      console.log(e);
-      this.zoomOn = true;
-      this.imageRect = this.image.getBoundingClientRect();
-      this.dataW.innerText = this.imageRect.width;
-      console.log(this.imageRect);
-      this.startListener();
-    });
-    
-  }
-  startListener() {
-    if (this.zoomOn) {
-      this.image.addEventListener("mousemove", e => {
-        this.setData("x", e);
-        this.setData("y", e);
-      });
-    }
-    
-  }
 
 
   setData(coord, event) {
