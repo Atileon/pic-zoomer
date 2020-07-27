@@ -9,14 +9,32 @@
     <meta name="theme-color" content="#ff69b4">
     <meta name="description" content="🙂">
 
-    <link rel="stylesheet" href="/src/index.css">
-    <script src="/src/index.js" type="module" defer></script>
+    <link rel="stylesheet" href="/css/main.css">
   </head>
   <body>
+    <main id="root">
+      <div class="data">
+        <p data-w></p>
+        <p data-mouse-x></p>
+        <p data-mouse-y></p>
+      </div>
 
-    <header>
-      <h1>ready.</h1>
-    </header>
-    
+      <div
+        class="img-wrapper"
+        data-pic-zoomer
+        data-zoom-amount="9"
+        data-zoom-img-src="https://picsum.photos/400/400"
+      >
+        <div class="img__wrapper">
+          <img src="https://picsum.photos/400/400" alt="" data-zoom-target-img />
+          <!-- <div class="pic-zoom__lens" data-zoom-lens></div> -->
+        </div>
+
+        <div class="img-zoomed" data-zoom-viewer>
+        </div>
+      </div>
+    </main>
+
+    <script src="/src/index.js" type="module" ></script>
   </body>
 </html>
