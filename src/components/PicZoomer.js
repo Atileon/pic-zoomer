@@ -21,10 +21,6 @@ export default class PicZoomer {
     //instance lens with image as reference setting amount of zoom from data attributes
     this.zoomLens = new PicZoomerLens(this.image, this.viewer,this.CONFIG.zoomAmount);
     
-    this.dataW = document.querySelector("[data-w]");
-    this.dataMouseX = document.querySelector("[data-mouse-x]");
-    this.dataMouseY = document.querySelector("[data-mouse-y]");
-    this.zoomOn = false;
   }
 
   init() {
