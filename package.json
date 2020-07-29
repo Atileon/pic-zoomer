@@ -21,5 +21,21 @@
     "sass": "^1.26.10",
     "snowpack": "^2.0.0-rc.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "name": "@ava/pic-zoomer",
+  "description": "A picture/image zoomer ",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "--"
+  },
+  "keywords": [
+    "zoom",
+    "pic-zoomer",
+    "product",
+    "zoom"
+  ],
+  "author": "Steve P.R. atileon.v.a@gmail.com (Atileon)",
+  "license": "MIT"
 }
